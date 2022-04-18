@@ -1,5 +1,12 @@
 npm install --save-dev jest
 npm i -D playwright
 npx playwright codegen https://netology.ru/?modal=sign_in
-node NetologyTest.js
-<a class="shared-components-Header--loginLink--2rB7n shared-components-Header--login--JN4tR" href="/?modal=sign_in">Войти</a>
+node tests\Test.js
+
+npx playwright test
+npx playwright test --headed
+
+  const browser = await chromium.launch({
+    headless: false,
+    slowMo: 2000
+  });
